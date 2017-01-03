@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 30, 2016 at 12:12 PM
+-- Generation Time: Jan 03, 2017 at 02:00 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `branch` (
   `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`branch_id`),
   KEY `client_id` (`client_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Dumping data for table `branch`
@@ -85,7 +85,15 @@ INSERT INTO `branch` (`branch_id`, `client_id`, `name`, `location`) VALUES
 (14, 3, 'london', 'london'),
 (15, 1, 'aus', 'aus'),
 (16, 11, 'london', ' london'),
-(17, 3, 'us', 'usa');
+(17, 3, 'us', 'usa'),
+(18, 4, 'london', 'london'),
+(19, 7, 'lon', 'london'),
+(20, 10, 'branch', 'branch'),
+(21, 13, 'dfdf', ' london'),
+(22, 14, 'dfdf', ' london'),
+(23, 5, 'dfdf', ' london'),
+(24, 5, 'dfdf', ' london'),
+(25, 5, 'dfdf', ' london');
 
 -- --------------------------------------------------------
 
@@ -212,7 +220,15 @@ INSERT INTO `client_branch_log` (`client_id`, `branch_id`, `branch_added`, `user
 (1, 15, 1, 1, '2016-12-27 07:17:42'),
 (11, 16, 1, 1, '2016-12-27 15:09:58'),
 (11, 16, 0, 1, '2016-12-27 18:30:00'),
-(3, 17, 1, 1, '2016-12-27 17:48:33');
+(3, 17, 1, 1, '2016-12-27 17:48:33'),
+(4, 18, 1, 1, '2016-12-30 19:22:41'),
+(7, 19, 1, 1, '2016-12-31 06:44:50'),
+(10, 20, 1, 1, '2016-12-31 06:50:59'),
+(13, 21, 1, 1, '2016-12-31 06:53:17'),
+(14, 22, 1, 1, '2016-12-31 06:56:41'),
+(5, 23, 1, 1, '2016-12-31 06:59:17'),
+(5, 24, 1, 1, '2016-12-31 06:59:17'),
+(5, 25, 1, 1, '2016-12-31 06:59:26');
 
 -- --------------------------------------------------------
 
@@ -306,7 +322,8 @@ INSERT INTO `client_note` (`client_id`, `user_id`, `subject`, `note`, `loggedTim
 (1, 1, 'a larer', 'd', '2016-12-27 13:04:40'),
 (1, 1, 'note', 'large largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge largelarge large', '2016-12-27 13:05:14'),
 (11, 1, 'this is a note', 'this is a note content', '2016-12-27 14:07:32'),
-(1, 1, 'this', 'this is an example', '2016-12-27 17:24:23');
+(1, 1, 'this', 'this is an example', '2016-12-27 17:24:23'),
+(1, 1, 'note', 'note on this', '2016-12-30 13:23:23');
 
 -- --------------------------------------------------------
 
@@ -349,7 +366,15 @@ INSERT INTO `client_product` (`client_id`, `product_Id`) VALUES
 (1, 1),
 (1, 2),
 (2, 2),
+(4, 2),
+(6, 2),
+(7, 2),
+(10, 2),
+(13, 2),
+(14, 2),
+(1, 3),
 (3, 3),
+(5, 3),
 (11, 3),
 (1, 4),
 (3, 4),
@@ -401,7 +426,15 @@ INSERT INTO `client_product_log` (`client_id`, `product_id`, `product_added`, `u
 (1, 1, 1, 1, '2016-12-27 17:25:47'),
 (1, 4, 1, 1, '2016-12-27 17:25:47'),
 (3, 4, 1, 1, '2016-12-27 17:45:37'),
-(1, 5, 1, 1, '2016-12-28 12:20:18');
+(1, 5, 1, 1, '2016-12-28 12:20:18'),
+(1, 3, 1, 1, '2016-12-30 13:23:51'),
+(4, 2, 1, 1, '2016-12-30 19:22:28'),
+(7, 2, 1, 1, '2016-12-31 06:44:37'),
+(10, 2, 1, 1, '2016-12-31 06:50:48'),
+(13, 2, 1, 1, '2016-12-31 06:53:09'),
+(14, 2, 1, 1, '2016-12-31 06:56:33'),
+(5, 3, 1, 1, '2016-12-31 06:57:42'),
+(6, 2, 1, 1, '2016-12-31 07:01:01');
 
 -- --------------------------------------------------------
 
@@ -452,7 +485,22 @@ INSERT INTO `client_till_log` (`client_id`, `till_id`, `till_added`, `user_id`, 
 (1, 23, 1, 1, '2016-12-28 12:43:01'),
 (1, 24, 1, 1, '2016-12-28 12:50:30'),
 (1, 25, 1, 1, '2016-12-28 13:01:18'),
-(2, 26, 1, 1, '2016-12-29 19:04:27');
+(2, 26, 1, 1, '2016-12-29 19:04:27'),
+(4, 27, 1, 1, '2016-12-30 19:22:58'),
+(7, 28, 1, 1, '2016-12-31 06:45:03'),
+(10, 29, 1, 1, '2016-12-31 06:51:17'),
+(13, 30, 1, 1, '2016-12-31 06:53:38'),
+(14, 31, 1, 1, '2016-12-31 06:56:57'),
+(5, 32, 1, 1, '2016-12-31 06:59:26'),
+(6, 33, 1, 1, '2016-12-31 07:02:30'),
+(6, 34, 1, 1, '2016-12-31 07:02:30'),
+(2, 35, 1, 1, '2016-12-31 07:08:34'),
+(2, 36, 1, 1, '2016-12-31 07:12:34'),
+(2, 37, 1, 1, '2016-12-31 07:16:23'),
+(2, 38, 1, 1, '2016-12-31 07:18:37'),
+(2, 39, 1, 1, '2016-12-31 08:16:13'),
+(2, 40, 1, 1, '2016-12-31 08:18:14'),
+(2, 41, 1, 1, '2016-12-31 08:18:32');
 
 -- --------------------------------------------------------
 
@@ -534,6 +582,19 @@ CREATE TABLE IF NOT EXISTS `note_history` (
 ,`loggedDate` varchar(10)
 ,`loggedTime` time
 );
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `operators`
+--
+
+CREATE TABLE IF NOT EXISTS `operators` (
+  `operator_id` int(11) NOT NULL AUTO_INCREMENT,
+  `operator_name` varchar(100) NOT NULL,
+  `operator_company_id` varchar(255) NOT NULL,
+  PRIMARY KEY (`operator_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
 -- --------------------------------------------------------
 
 --
@@ -626,6 +687,7 @@ CREATE TABLE IF NOT EXISTS `tickets` (
   `ticket_id` int(11) NOT NULL AUTO_INCREMENT,
   `swimlane_status_id` int(11) DEFAULT NULL,
   `client_id` int(11) DEFAULT NULL,
+  `till_id` int(11) DEFAULT NULL,
   `summary` varchar(255) DEFAULT NULL,
   `description` varchar(1100) DEFAULT NULL,
   `problem_type_id` int(11) DEFAULT NULL,
@@ -637,22 +699,20 @@ CREATE TABLE IF NOT EXISTS `tickets` (
   PRIMARY KEY (`ticket_id`),
   KEY `swimlane_status_id` (`swimlane_status_id`),
   KEY `client_id` (`client_id`),
+  KEY `till_id` (`till_id`),
   KEY `problem_type_id` (`problem_type_id`),
   KEY `priority_id` (`priority_id`),
   KEY `assignee_id` (`assignee_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `tickets`
 --
 
-INSERT INTO `tickets` (`ticket_id`, `swimlane_status_id`, `client_id`, `summary`, `description`, `problem_type_id`, `priority_id`, `assignee_id`, `user_id`, `sceenshot_name`, `due_date`) VALUES
-(1, 2, 1, 'sum', 'des', 1, 1, 1, 1, 'screenshot_1483080099746.png', '2016-12-31'),
-(2, 1, 1, 'sum2', 'des 2', 1, 1, 1, 1, NULL, '2016-12-31'),
-(3, 1, 1, 'sum2', 'des 2', 1, 3, 1, 1, 'screenshot_1483081177301.png', '2016-12-31'),
-(4, 2, 1, 'sum2', 'des 2', 1, 2, 1, 1, 'screenshot_1483081236296.png', '2016-12-31'),
-(5, 2, 1, 'sum2', 'des 2', 1, 2, 1, 1, 'screenshot_1483081351064.png', '2016-12-31'),
-(6, 1, 1, 'sum2', 'des 2', 1, 3, 1, 1, 'screenshot_1483081400222.png', '2016-12-31');
+INSERT INTO `tickets` (`ticket_id`, `swimlane_status_id`, `client_id`, `till_id`, `summary`, `description`, `problem_type_id`, `priority_id`, `assignee_id`, `user_id`, `sceenshot_name`, `due_date`) VALUES
+(1, 1, 1, 22, 'l la la', 'des', 1, 2, 1, 1, 'screenshot_1483098775476.png', '2016-12-31'),
+(2, 1, 1, 22, 'sum', 'de', 1, 1, 1, 1, NULL, '2016-12-31'),
+(3, 1, 1, 22, 'sum', 's', 1, 1, 1, 1, NULL, '2016-12-31');
 
 -- --------------------------------------------------------
 
@@ -679,14 +739,35 @@ INSERT INTO `ticketswimlane` (`swimlane_id`, `swimlane_status`, `swimlane_color`
 -- --------------------------------------------------------
 
 --
+-- Stand-in structure for view `ticket_data_view`
+--
+CREATE TABLE IF NOT EXISTS `ticket_data_view` (
+`ticket_id` int(11)
+,`summary` varchar(255)
+,`sceenshot_name` varchar(255)
+,`description` varchar(1100)
+,`problem_type_name` varchar(255)
+,`priority_name` varchar(255)
+,`swimlane_status` varchar(255)
+,`till_id` int(11)
+,`till_name` varchar(255)
+,`name` varchar(255)
+,`expiredate` date
+,`location` varchar(255)
+,`developer_name` varchar(255)
+,`user_id` int(11)
+);
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ticket_swimlane_log`
 --
 
 CREATE TABLE IF NOT EXISTS `ticket_swimlane_log` (
   `ticket_id` int(11) NOT NULL,
   `swimlane_status_id` int(11) DEFAULT NULL,
-  `user_id` int(11) NOT NULL,
   `loggedTime` timestamp NULL DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
   KEY `ticket_id` (`ticket_id`),
   KEY `swimlane_status_id` (`swimlane_status_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -695,25 +776,12 @@ CREATE TABLE IF NOT EXISTS `ticket_swimlane_log` (
 -- Dumping data for table `ticket_swimlane_log`
 --
 
-INSERT INTO `ticket_swimlane_log` (`ticket_id`, `swimlane_status_id`, `user_id`, `loggedTime`) VALUES
-(1, 1, 0, '2016-12-30 06:41:39'),
-(6, 1, 1, '2016-12-30 07:03:21'),
-(4, 2, 1, '2016-12-30 07:14:22'),
-(6, 2, 1, '2016-12-30 07:20:04'),
-(6, 1, 1, '2016-12-30 07:21:51'),
-(6, 2, 1, '2016-12-30 07:25:27'),
-(5, 2, 1, '2016-12-30 07:26:50'),
-(6, 2, 1, '2016-12-30 08:05:36'),
-(6, 1, 1, '2016-12-30 08:08:37'),
-(6, 2, 1, '2016-12-30 08:09:27'),
-(5, 2, 1, '2016-12-30 08:09:40'),
-(5, 1, 1, '2016-12-30 08:09:52'),
-(6, 1, 1, '2016-12-30 08:12:43'),
-(6, 2, 1, '2016-12-30 08:12:54'),
-(5, 2, 1, '2016-12-30 08:13:07'),
-(6, 1, 1, '2016-12-30 08:13:16'),
-(4, 2, 1, '2016-12-30 08:13:26'),
-(6, 1, 1, '2016-12-30 09:12:59');
+INSERT INTO `ticket_swimlane_log` (`ticket_id`, `swimlane_status_id`, `loggedTime`, `user_id`) VALUES
+(1, 1, '2016-12-30 11:52:55', 1),
+(1, 3, '2016-12-30 12:48:59', 1),
+(1, 1, '2016-12-30 12:49:15', 1),
+(2, 1, '2016-12-30 13:19:42', 1),
+(3, 1, '2016-12-30 13:22:41', 1);
 
 -- --------------------------------------------------------
 
@@ -733,7 +801,7 @@ CREATE TABLE IF NOT EXISTS `till` (
   KEY `client_id` (`client_id`),
   KEY `branch_id` (`branch_id`),
   KEY `product_Id` (`product_Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
 
 --
 -- Dumping data for table `till`
@@ -764,7 +832,22 @@ INSERT INTO `till` (`till_id`, `till_key`, `till_name`, `expiredate`, `client_id
 (23, 'zzzzzzzzzzzzzzzz', '', '2016-12-09', 1, 1, 1),
 (24, 'aaaaaaaaa', 'sdaf', '2016-12-01', 1, 1, 1),
 (25, 'key', 'hj', '2016-12-20', 1, 2, 4),
-(26, 'key', 'name', '2016-12-31', 2, 4, 2);
+(26, 'key', 'name', '2016-12-31', 2, 4, 2),
+(27, 'key', 'name', '2016-12-31', 4, 18, 2),
+(28, 'key', 'name', '2016-12-31', 7, 19, 2),
+(29, 'key', 'till 1', '2016-12-31', 10, 20, 2),
+(30, 'key', 'name', '2016-12-31', 13, 21, 2),
+(31, 'k', 'n', '2016-12-31', 14, 22, 2),
+(32, 'l', 'k', '2016-12-31', 5, 7, 3),
+(33, 'j', 'n', '2016-12-31', 6, 8, 2),
+(34, 'j', 'n', '2016-12-31', 6, 8, 2),
+(35, 'k', 'j', '2016-12-31', 2, 4, 2),
+(36, 'asdfertdghfgyrtyu2-12323-4324-546', 'jk', '2017-12-31', 2, 4, 2),
+(37, 'dfsd', 'j', '2018-12-31', 2, 4, 2),
+(38, 'f', 'j', '2016-12-31', 2, 4, 2),
+(39, 'dsf', 'd', '2017-12-01', 2, 4, 2),
+(40, 'dfs', 'jk', '2018-01-01', 2, 4, 2),
+(41, 'd', 'aaaaaaaaaaaaaaaa', '2016-01-01', 2, 4, 2);
 
 -- --------------------------------------------------------
 
@@ -807,7 +890,8 @@ INSERT INTO `users` (`user_id`, `username`, `password`, `role`, `has_logged_in`)
 (1, 'cham', 'sha1$ec9c2592$1$76aa572f34a1a31c465f1ec7f53062e452b334da', 'OPERATOR', 1),
 (0, 'test', '1234', 'OPERATOR', 0),
 (2, 'test', '1234', 'OPERATOR', 0),
-(14, 'CRM_CLIENT_USERNAME_14', 'sha1$cc5d7e2a$1$310b74c08f4f41299ad439b39b4021f1e6019f50', 'CLIENT', 0);
+(14, 'CRM_CLIENT_USERNAME_14', 'sha1$cc5d7e2a$1$310b74c08f4f41299ad439b39b4021f1e6019f50', 'CLIENT', 0),
+(1, 'admin', 'sha1$b0bbf2da$1$e418e7b17912b54da3b86e94af440fe9936626ed', 'ADMIN', 1);
 
 -- --------------------------------------------------------
 
@@ -871,6 +955,15 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 DROP TABLE IF EXISTS `note_history`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `note_history` AS select `client_note`.`subject` AS `subject`,`client_note`.`note` AS `content`,'note' AS `type`,'' AS `id`,`client_note`.`client_id` AS `client_id`,'' AS `branchName`,'' AS `productName`,'' AS `expireDate`,`client_note`.`loggedTime` AS `loggedTimeStamp`,concat(cast(`client_note`.`loggedTime` as date),'') AS `loggedDate`,cast(`client_note`.`loggedTime` as time) AS `loggedTime` from `client_note`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `ticket_data_view`
+--
+DROP TABLE IF EXISTS `ticket_data_view`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `ticket_data_view` AS select `tickets`.`ticket_id` AS `ticket_id`,`tickets`.`summary` AS `summary`,`tickets`.`sceenshot_name` AS `sceenshot_name`,`tickets`.`description` AS `description`,`problem_types`.`problem_type_name` AS `problem_type_name`,`priorities`.`priority_name` AS `priority_name`,`ticketswimlane`.`swimlane_status` AS `swimlane_status`,`tickets`.`till_id` AS `till_id`,`till`.`till_name` AS `till_name`,`products`.`name` AS `name`,`till`.`expiredate` AS `expiredate`,`branch`.`location` AS `location`,`developers`.`developer_name` AS `developer_name`,`tickets`.`user_id` AS `user_id` from (((((((`tickets` join `ticketswimlane` on((`tickets`.`swimlane_status_id` = `ticketswimlane`.`swimlane_id`))) join `priorities` on((`tickets`.`priority_id` = `priorities`.`priority_id`))) join `problem_types` on((`tickets`.`problem_type_id` = `problem_types`.`problem_type_id`))) join `developers` on((`tickets`.`assignee_id` = `developers`.`developer_id`))) join `till` on((`tickets`.`till_id` = `till`.`till_id`))) join `branch` on((`till`.`branch_id` = `branch`.`branch_id`))) join `products` on((`till`.`product_Id` = `products`.`product_Id`)));
 
 -- --------------------------------------------------------
 
@@ -973,9 +1066,10 @@ ALTER TABLE `support_contract`
 ALTER TABLE `tickets`
   ADD CONSTRAINT `tickets_ibfk_1` FOREIGN KEY (`swimlane_status_id`) REFERENCES `ticketswimlane` (`swimlane_id`),
   ADD CONSTRAINT `tickets_ibfk_2` FOREIGN KEY (`client_id`) REFERENCES `client` (`client_id`),
-  ADD CONSTRAINT `tickets_ibfk_3` FOREIGN KEY (`problem_type_id`) REFERENCES `problem_types` (`problem_type_id`),
-  ADD CONSTRAINT `tickets_ibfk_4` FOREIGN KEY (`priority_id`) REFERENCES `priorities` (`priority_id`),
-  ADD CONSTRAINT `tickets_ibfk_5` FOREIGN KEY (`assignee_id`) REFERENCES `developers` (`developer_id`);
+  ADD CONSTRAINT `tickets_ibfk_3` FOREIGN KEY (`till_id`) REFERENCES `till` (`till_id`),
+  ADD CONSTRAINT `tickets_ibfk_4` FOREIGN KEY (`problem_type_id`) REFERENCES `problem_types` (`problem_type_id`),
+  ADD CONSTRAINT `tickets_ibfk_5` FOREIGN KEY (`priority_id`) REFERENCES `priorities` (`priority_id`),
+  ADD CONSTRAINT `tickets_ibfk_6` FOREIGN KEY (`assignee_id`) REFERENCES `developers` (`developer_id`);
 
 --
 -- Constraints for table `ticket_swimlane_log`
